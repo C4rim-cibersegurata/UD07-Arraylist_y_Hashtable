@@ -3,6 +3,7 @@ package bootcamp_java_UD07;
 import java.util.Hashtable;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Enumeration;
 
 public class Ex1 {
 	public static Scanner sc = new Scanner(System.in);
@@ -27,6 +28,14 @@ public class Ex1 {
 		return media;
 	}
 
+	public static void mostrarLista(Hashtable<String, String> llista) {
+		Enumeration<String> e = llista.keys();
+		while (e.hasMoreElements()) {
+			String clau = e.nextElement();
+			System.out.println("La media de " + clau + " es : " + llista.get(clau));
+		}
+	}
+
 	public static void main(String[] args) {
 		ArrayList<String> materias = new ArrayList<>();
 		Hashtable<String, String> llista = new Hashtable<String, String>();
@@ -42,7 +51,7 @@ public class Ex1 {
 			alumno = sc.next();
 			llista.put(alumno, String.format("%.2f", calcularMedia(materias)));
 		}
-		System.out.println("Mappings of ht1 : " + llista);
+		mostrarLista(llista);
 		sc.close();
 	}
 
