@@ -71,7 +71,7 @@ public class Ex4 {
 	public static void main(String[] args) {
 
 		double precioTotal = 0, precioTotalIVA = 0, pago;
-		String opcionMenu = "", opcion = "", opcionLista="";
+		String opcionMenu = "", opcion = "", opcionLista = "";
 		Hashtable<String, Double> listaCompra = new Hashtable<String, Double>();
 		Hashtable<String, Double> productos4iva = new Hashtable<String, Double>();
 		Hashtable<String, Double> productos21iva = new Hashtable<String, Double>();
@@ -100,17 +100,29 @@ public class Ex4 {
 					opcionMenu = JOptionPane.showInputDialog(
 							" 1. Introducir nuevo artículo\n 2. Mostrar artículo \n 3. Mostrar inventario\n 4. Salir");
 					if (opcionMenu.equalsIgnoreCase("Introducir nuevo artículo") || opcionMenu.equals("1")) {
-						opcionLista = JOptionPane.showInputDialog(" Elige que productos quieres gestionar\n 1. 21% IVA\n 2. 4% IVA");
-						if (opcionLista.equals("1")) {introducirArticulo(productos21iva);}
-						else if (opcionLista.equals("2")) {introducirArticulo(productos4iva);}
+						opcionLista = JOptionPane
+								.showInputDialog(" Elige que productos quieres gestionar\n 1. 21% IVA\n 2. 4% IVA");
+						if (opcionLista.equals("1")) {
+							introducirArticulo(productos21iva);
+						} else if (opcionLista.equals("2")) {
+							introducirArticulo(productos4iva);
+						}
 					} else if (opcionMenu.equalsIgnoreCase("Mostrar artículo") || opcionMenu.equals("2")) {
-						opcionLista = JOptionPane.showInputDialog(" Elige que productos quieres gestionar\n 1. 21% IVA\n 2. 4% IVA");
-						if (opcionLista.equals("1")) {mostrarArticulo(productos21iva);}
-						else if (opcionLista.equals("2")) {mostrarArticulo(productos4iva);}
+						opcionLista = JOptionPane
+								.showInputDialog(" Elige que productos quieres gestionar\n 1. 21% IVA\n 2. 4% IVA");
+						if (opcionLista.equals("1")) {
+							mostrarArticulo(productos21iva);
+						} else if (opcionLista.equals("2")) {
+							mostrarArticulo(productos4iva);
+						}
 					} else if (opcionMenu.equalsIgnoreCase("Mostrar inventario") || opcionMenu.equals("3")) {
-						opcionLista = JOptionPane.showInputDialog(" Elige que productos quieres gestionar\n 1. 21% IVA\n 2. 4% IVA");
-						if (opcionLista.equals("1")) {inventario(productos21iva);}
-						else if (opcionLista.equals("2")) {inventario(productos4iva);}
+						opcionLista = JOptionPane
+								.showInputDialog(" Elige que productos quieres gestionar\n 1. 21% IVA\n 2. 4% IVA");
+						if (opcionLista.equals("1")) {
+							inventario(productos21iva);
+						} else if (opcionLista.equals("2")) {
+							inventario(productos4iva);
+						}
 					} else if (opcionMenu.equalsIgnoreCase("salir") || opcionMenu.equals("4")) {
 						System.out.println("Saliendo...");
 					} else {

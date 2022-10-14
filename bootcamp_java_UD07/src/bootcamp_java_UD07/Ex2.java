@@ -7,7 +7,8 @@ import java.util.Enumeration;
 public class Ex2 {
 	public static Scanner sc = new Scanner(System.in);
 
-	public static void copiaLista(Hashtable<String, Double> listaCompra, Hashtable<String, Double> productos4iva,Hashtable<String, Double> productos21iva) {
+	public static void copiaLista(Hashtable<String, Double> listaCompra, Hashtable<String, Double> productos4iva,
+			Hashtable<String, Double> productos21iva) {
 		String producto = "";
 		System.out.println("Introduce '-' para salir de la caja ");
 		while (!producto.equals("-")) {
@@ -25,7 +26,8 @@ public class Ex2 {
 		}
 	}
 
-	public static double compruebaPago(Hashtable<String, Double> listaCompra, Hashtable<String, Double> productos4iva,Hashtable<String, Double> productos21iva, double precioTotalIVA) {
+	public static double compruebaPago(Hashtable<String, Double> listaCompra, Hashtable<String, Double> productos4iva,
+			Hashtable<String, Double> productos21iva, double precioTotalIVA) {
 		Enumeration<String> e = listaCompra.keys();
 		while (e.hasMoreElements()) {
 			String clau = e.nextElement();// Dependiendo de en que lista se encuentre calculará un IVA u otro
